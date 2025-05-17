@@ -4,4 +4,4 @@ Maison_system es un sistema para los restaurantes, donde pueden observar el sist
 # En caso de que el proyecto deje de funcionar
 El proyecto dejará de funcionar sino se sigue las indicaciones que se muestran en el programa, así como el tipo de datos que tiene y como se manegan los mismos, por lo que es muy importante seguir las indicaciones que se muestra
 # Diagrama de clases
-![Diagrama drawio](https://github.com/amazingly145/Magic-Brain/blob/main/magic_brain_2%20(5).jpg?raw=true)
+![Diagrama drawio](https://github.com/amazingly145/Maison_system/blob/main/UML_restaurante.png?raw=true)
