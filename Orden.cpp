@@ -2,15 +2,21 @@
 using namespace std;
 #include <string>
 #include "Orden.h"
+//Agregacion con platillo
 
 Orden :: Orden (){
 
 }
-Orden :: Orden(int _numero_orden, float _total_pagar, int numero_mesa, int _numero_platillos, string _fecha){
+//Constructor para inicializar el platillo
+Orden::Orden(Platillo*punteroplatillo) : pplatillo(punteroplatillo){
+    
+}
+Orden :: Orden(int _numero_orden, float _total_pagar, int numero_mesa, int _numero_platillos, string _fecha, int _orden_max){
     numero_orden = _numero_orden;
     total_pagar = _total_pagar;
     numero_platillos = _numero_platillos;
     fecha = _fecha;
+    orden_max = _orden_max;
 }
 
 Orden :: Orden (int _numero_orden, float _total_pagar, int numero_mesa, int _numero_platillos, string _fecha, string _especialidad){
@@ -58,6 +64,18 @@ int Orden :: getNumero_mesa(){
 string Orden ::getFecha(){
     return fecha;
 }
-string Orden::mostrarOrden(){
-    return "La orden es:";
+void Orden::nuevoPlatillo(){
+    cout << "Este es el nuevo platillo creado: " << endl;
+    pplatillo -> setEntrada("crema de calabaza");
+    cout << pplatillo -> getEntrada();
+    pplatillo -> setPlato_fuerte("Carne molida");
+    cout << pplatillo -> getPlato_fuerte();
+    pplatillo -> setPostre("pastel de chocolar");
+    cout << pplatillo -> getPostre();
+}
+void Orden::mostrarOrden(){
+    cout << "Orden con platillo: " << pplatillo -> getNombre() << endl;
+    pplatillo -> setIngredientes("pan");
+    cout << "Ingredientes: " << pplatillo -> getIngredientes() << endl;
+    //cout << "Es Vegano: " << pplatillo -> esvegano() << endl;
 }
