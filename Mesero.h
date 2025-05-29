@@ -18,6 +18,8 @@ using namespace std;
 #include <string>
 #include "Empleado.h"
 #include "Cliente.h"
+#ifndef MESERO_H
+#define MESERO_H
 
 class Mesero : public Empleado{
     private:
@@ -25,11 +27,14 @@ class Mesero : public Empleado{
         Cliente cliente;
         string atender;
     public:
-        Mesero(string _nombre, string _id, string _rol, int, Cliente, string);
+        Mesero();
+        Mesero(string, string, string, string);
+        Mesero(string, string, string , int, Cliente, string);
         void setNumero_mesa(int);
         int getNumero_mesa();
         void setAtender(string);
         string getAtender();
-        bool atender_cliente(string);
-        string EmpleadoData();
+        void atender_cliente(string);
+        void EmpleadoData();
 };
+#endif
