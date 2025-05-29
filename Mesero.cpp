@@ -17,10 +17,15 @@ using namespace std;
 #include <iostream>
 #include <string>
 #include "Mesero.h"
+Mesero::Mesero(){
 
+}
 Mesero :: Mesero (string _nombre, string _id, string _rol, int _numero_mesa, Cliente _cliente, string _atender) : Empleado(_nombre, _id, _rol){
     numero_mesa = _numero_mesa;
     cliente = _cliente;
+    atender = _atender;
+}
+Mesero::Mesero(string _nombre, string _id, string _rol, string _atender) : Empleado(_nombre, _id, _rol){
     atender = _atender;
 }
 
@@ -38,10 +43,18 @@ string Mesero :: getAtender(){
     return atender;
 }
 
-bool Mesero :: atender_cliente(string _atender){
-    if (_atender == "true"){
-        return "Si esta trabajando";
+void Mesero :: atender_cliente(string _atender){
+    if (_atender == "S"){
+        cout << "Que mesa atiendes? " << endl;
+        cin >> numero_mesa;
+        cout << "atiendes numero mesa: " << numero_mesa;
     }else{
-        return "No esta trabajando";
+        numero_mesa = 0;
+        cout << numero_mesa << endl;
     }
+}
+
+void Mesero::EmpleadoData(){
+    Empleado::EmpleadoData();
+    cout << "El mesero esta atendiendo mesa: " << atender << endl;
 }
