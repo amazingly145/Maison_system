@@ -51,3 +51,7 @@ string Cliente::ClienteData() {
         ", viene con: " + to_string(num_personas) + 
         " personas, forma de pago: " + forma_pago;
 }
+  return "Nombre del cliente: " + cliente + 
+        ", viene con: " + to_string(num_personas) + 
+        " personas, forma de pago: " + forma_pago;
+}
