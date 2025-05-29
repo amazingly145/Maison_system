@@ -18,10 +18,14 @@
 using namespace std;
 #include <string>
 #include "Empleado.h"
-
 //Constructor donde se inicializan los valores
 Empleado::Empleado(){
 
+}
+Empleado::Empleado(string _nombre, string _id, string _rol){
+    nombre = _nombre;
+    id = _id;
+    rol = _rol;
 }
 
 Empleado :: Empleado(string _nombre, string _id, string _rol, int _numero_empleados){
@@ -57,13 +61,6 @@ string Empleado :: getRol(){
 int Empleado :: getNumero_empleados(){
     return numero_empleados;
 }
-
-//Sobreescritura con gerente y mesero
-string Empleado :: EmpleadoData(){
-    return "Nombre empleado: " + nombre + "Id" + id +
-    "Rol" + rol;
+void Empleado::EmpleadoData(){
+    cout << "Nombre del empleado: "+ nombre + "\nId: " + id + "\nRol:"+ rol << endl;
 }
-
-
-
-
