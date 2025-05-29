@@ -15,6 +15,8 @@
 using namespace std;
 #include <iostream>
 #include <string>
+#ifndef CLIENTE_H
+#define CLIENTE_H
 //Definimos la clase cliente
 class Cliente{
     private:
@@ -32,3 +34,4 @@ class Cliente{
         int getNum_personas();
         string ClienteData();
 };
+#endif
