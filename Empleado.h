@@ -17,6 +17,8 @@
 #include <iostream>
 using namespace std;
 #include <string>
+#ifndef EMPLEADO_H
+#define EMPLEADO_H
 
 //Clase Empleado
 class Empleado{
@@ -28,16 +30,19 @@ class Empleado{
     public:
         //Constructor
         Empleado();
-        Empleado(string, string, string,int);
+        Empleado(string, string, string);
+        Empleado(string, string, string, int);
         //Metodos setters
         void setNombre(string);
         void setId(string);
         void setRol(string);
         void setNumero_empleados(int);
+        //Metodos getters
         string getNombre();
         string getId();
         string getRol();
         int getNumero_empleados();
-        //Sobre escritura
-        string EmpleadoData();
+        //Sobre escritura con Empleado y Cocinero
+        virtual void EmpleadoData();
 };
+#endif
