@@ -34,7 +34,8 @@ void Cocinero::setNumero_platillos(int _numero_platillos){
 int Cocinero::getNumero_platillos(){
     return numero_platillos;
 }
-string Cocinero::EmpleadoData(){
-    return "Nombre del empleado: "+ nombre + "Id:" +
-        "Rol: "+ rol;
+void Cocinero::EmpleadoData(){
+    Empleado::EmpleadoData();
+    cout << "numero platillos hechos: " << to_string(numero_platillos) << endl;
+
 }
