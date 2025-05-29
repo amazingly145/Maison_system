@@ -23,6 +23,8 @@ using namespace std;
 *de empleado para implementar composicion
 */ 
 #include "Empleado.h"
+#ifndef RESTAURANTE_H
+#define RESTAURANTE_H
 
 //Clase Restaurante
 class Restaurante{
@@ -34,6 +36,8 @@ class Restaurante{
         int rating;
     //Metodos
     public:
+        Restaurante ();
+        Restaurante(string,string, int);
         Restaurante(string,string, Empleado, int);
         void setNombre(string);
         void setDireccion(string);
@@ -42,3 +46,4 @@ class Restaurante{
         string getDireccion();
         string RestauranteData();
 };
+#endif
