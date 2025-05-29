@@ -6,7 +6,7 @@
 */
 
 /*
-* Clase Platillo (archivo header)
+* Clase Platillo (archivo cpp)
 *
 */
 //Mandamos a llamar las librerías
