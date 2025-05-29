@@ -17,6 +17,8 @@ using namespace std;
 #include <iostream>
 # include <string>
 #include "Empleado.h"
+#ifndef COCINERO_H
+#define COCINERO_H
 //Definimos la clase Cocinero
 class Cocinero : public Empleado{
     private:
@@ -27,6 +29,7 @@ class Cocinero : public Empleado{
         void setNumero_platillos(int);
         int getNumero_platillos( );
         //Sobre escritura 
-        string EmpleadoData();
+        void EmpleadoData();
 
 };
+#endif
