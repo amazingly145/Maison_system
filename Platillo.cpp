@@ -14,23 +14,61 @@ using namespace std;
 #include <iostream>
 #include <string>
 #include "Platillo.h"
-Platillo :: Platillo(string _nombre, string _ingredientes, int _calificacion, bool _vegano){
+Platillo::Platillo(){
+
+}
+Platillo :: Platillo(string _nombre, string _entrada,  int _calificacion, bool _vegano, string _plato_fuerte, string _postre, string _ingrediente){
     nombre = _nombre;
-    ingredientes = _ingredientes;
+    entrada = _entrada;
+    plato_fuerte = _plato_fuerte;
+    postre = _postre;
     calificacion = _calificacion;
     vegano = _vegano;
+    ingredientes = _ingrediente;
 }
-
-//Setters
+//Metodos Setters
 void Platillo ::  setNombre(string _nombre){
     nombre = _nombre;
 }
-void Platillo :: setIngrediente(string _ingredientes){
-    ingredientes = _ingredientes;
-}void Platillo :: setCalificaciones( int _calificacion){
+void Platillo :: setEntrada(string _entrada){
+    entrada = _entrada;
+}
+void Platillo::setPlato_fuerte(string _plato_fuerte){
+    plato_fuerte = _plato_fuerte;
+}
+void Platillo::setPostre(string _postre){
+    postre = _postre;
+}
+void Platillo :: setCalificaciones( int _calificacion){
     calificacion = _calificacion;
 }
-
-bool Platillo :: esvegano(){
-
+void Platillo :: setIngredientes(string _ingredientes){
+    ingredientes = _ingredientes;
+}
+//Metodos Getters
+string Platillo::getNombre(){
+    return nombre;
+}
+string Platillo::getEntrada(){
+    return entrada;
+}
+string Platillo::getPlato_fuerte(){
+    return plato_fuerte;
+}
+string Platillo::getPostre(){
+    return postre;
+}
+int Platillo::getCalificacion(){
+    return calificacion;
+}
+string Platillo::getIngredientes(){
+    return ingredientes;
+}
+//Metodo para saber si es vegano
+bool Platillo :: esvegano(string ingredientes){
+    if (ingredientes=="vegano"){
+        return true;
+    }else{
+        return false;
+    }
 }
