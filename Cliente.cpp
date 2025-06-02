@@ -46,12 +46,9 @@ string Cliente::getForma_pago(){
 int Cliente::getNum_personas(){
     return num_personas;
 }
-string Cliente::ClienteData() {
+string Cliente::ClienteData(){
     return "Nombre del cliente: " + cliente + 
         ", viene con: " + to_string(num_personas) + 
         " personas, forma de pago: " + forma_pago;
 }
-  return "Nombre del cliente: " + cliente + 
-        ", viene con: " + to_string(num_personas) + 
-        " personas, forma de pago: " + forma_pago;
-}
+
