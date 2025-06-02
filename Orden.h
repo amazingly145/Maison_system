@@ -15,18 +15,26 @@
 using namespace std;
 #include <iostream>
 #include <string>
-
+#include "Platillo.h"
+#ifndef ORDEN_H
+#define ORDEN_H
+//Agregacion con platillo
 class Orden{
     private:
+        int orden_max;
         int numero_orden;
         float total_pagar;
         int numero_platillos;
         int numero_mesa;
         string fecha;
         string especialidad;
+        //puntero para hacer agregacion
+        Platillo*pplatillo;  
     public:
+        //Metodo para inicializar el puntero
+        Orden(Platillo*);
         Orden();
-        Orden (int, float, int, int, string);
+        Orden (int, float, int, int, string, int _orden_max);
         //Sobrecarga
         Orden (int, float, int, int, string, string);
         //Setters
@@ -41,5 +49,7 @@ class Orden{
         float getNumero_platillos();
         int getNumero_mesa();
         string getFecha();
-        string mostrarOrden();
+        void nuevoPlatillo();
+        void mostrarOrden();
 };
+#endif
