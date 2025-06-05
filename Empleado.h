@@ -41,8 +41,12 @@ class Empleado{
         string getNombre();
         string getId();
         string getRol();
-        int getNumero_empleados();
-        //Sobre escritura con Empleado y Cocinero
-        virtual void EmpleadoData();
+        string getNumero_empleados();
+        /*Sobrescritura con Empleado y Cocinero
+        * se pone la funcion virtual
+        * para hacer polimorfismo
+        */
+       //Clase abstracta
+        virtual void EmpleadoData() = 0;
 };
 #endif
