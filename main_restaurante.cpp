@@ -10,15 +10,17 @@ using namespace std;
 #include "Cliente.cpp"
 #include "Orden.cpp"
 #include "Platillo.cpp"
+/*Agregar funcion donde se pueda ver
+los datos de cocinero y mesero*/
 
 void menu(){
     cout << "Menu" << endl;
     cout << "1. Colocar informacion restaurante" << endl;
     cout << "2. Obtener informacion restaurante" << endl;
     cout << "3. Registrar empleado" << endl;
-    cout << "4. Registrar platillo" << endl;
-    cout << "5. Ver platillo" << endl;
-    cout << "6. Ver calificaciones del restaurante" << endl;
+    cout << "4. Ver menu del dia" << endl;
+    cout << "5. Ver nuevo platillo creado" << endl;
+    cout << "6. Ver calificacion del restaurante" << endl;
     cout << "7. Salir" << endl;
 }
 void instrucciones_de_uso(){
@@ -30,17 +32,16 @@ int main(){
     cout << "Bienvenido al sistema de un restaurante." << endl;
     //Variables
     string nombre, direccion, rol, id, atender;
-    int usuario, num_empleados, rating, num_platillos, orden_max;
+    int usuario, rating, num_platillos, orden_max, num_empleados;
     bool constante;
     //Objetos
-    Empleado empleado;
+    Empleado* empleado = new Cocinero();
     Restaurante restaurante;
     Orden orden;
     Platillo platillo;
     Mesero mesero;
-    //Puntero
-    Empleado *empleado_data;
     //Para agregacion
+    Empleado* empleado_data;
     //Se crea puntero para agregacion
     Platillo* puntador_platillo = new Platillo();
     //se pasa el puntero platillo a orden 
@@ -53,12 +54,13 @@ int main(){
         cout << "Escoge la opcion del menu que deseas usar" << endl;
         cin >> usuario;
         if (usuario == 1){
+            cout << "Registrar el restaurante" << endl;
             cout << "Nombre del restaurante: " << endl;
             cin >> nombre;
             restaurante.setNombre(nombre);
-            cout << "Numero de empleados: " << endl;
+            /*cout << "Numero de empleados: " << endl;
             cin >> num_empleados;
-            empleado.setNumero_empleados(num_empleados);
+            empleado->setNumero_empleados(num_empleados);*/
             cout << "Direccion: " << endl;
             cin >> direccion;
             restaurante.setDireccion(direccion);
@@ -73,10 +75,10 @@ int main(){
             cout << "Funcion para registrar empleado: " << endl;
             cout << "Nombre del empleado: " << endl;
             cin >> nombre;
-            empleado.setNombre(nombre);
+            empleado->setNombre(nombre);
             cout << "Ingresar id de empleado: " << endl;
             cin >> id;
-            empleado.setId(id);
+            empleado->setId(id);
             cout << "Cual es el rol que hace el empleado(escribir en minusculas): " << endl;
             cin >> rol;
             if (rol == "cocinero"){
