@@ -32,16 +32,17 @@ class Restaurante{
     private:
         string nombre;
         string direccion;
-        Empleado numero_empleados;
+        /*Empleado*num_empleados*/;
         int rating;
     //Metodos
     public:
         Restaurante ();
-        Restaurante(string,string, int);
-        Restaurante(string,string, Empleado, int);
+        Restaurante(string, string/*,Empleado**/, int);
+        //Restaurante(string, string, int);
         void setNombre(string);
         void setDireccion(string);
         void setRating(int);
+        void setNumEmpleados(Empleado*);
         int getRating();
         string getDireccion();
         string RestauranteData();
