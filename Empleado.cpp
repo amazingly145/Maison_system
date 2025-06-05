@@ -58,8 +58,8 @@ string Empleado :: getId(){
 string Empleado :: getRol(){
     return rol;
 }
-int Empleado :: getNumero_empleados(){
-    return numero_empleados;
+string Empleado :: getNumero_empleados(){
+    return to_string(numero_empleados);
 }
 void Empleado::EmpleadoData(){
     cout << "Nombre del empleado: "+ nombre + "\nId: " + id + "\nRol:"+ rol << endl;
