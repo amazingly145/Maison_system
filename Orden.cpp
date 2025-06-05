@@ -65,17 +65,21 @@ string Orden ::getFecha(){
     return fecha;
 }
 void Orden::nuevoPlatillo(){
-    cout << "Este es el nuevo platillo creado: " << endl;
-    pplatillo -> setEntrada("crema de calabaza");
+    cout << "Menu del dia: " << endl;
+    cout << "Entrada" << endl;
+    pplatillo -> setEntrada("crema de calabaza\n");
     cout << pplatillo -> getEntrada();
-    pplatillo -> setPlato_fuerte("Carne molida");
+    cout << "Plato Fuerte" << endl;
+    pplatillo -> setPlato_fuerte("Carne molida\n");
     cout << pplatillo -> getPlato_fuerte();
-    pplatillo -> setPostre("pastel de chocolar");
+    cout << "Postre" << endl;
+    pplatillo -> setPostre("pastel de chocolate\n");
     cout << pplatillo -> getPostre();
 }
 void Orden::mostrarOrden(){
-    cout << "Orden con platillo: " << pplatillo -> getNombre() << endl;
-    pplatillo -> setIngredientes("pan");
+    pplatillo -> setNombre("Sandwich");
+    cout << "Nombre del platillo: " << pplatillo -> getNombre() << endl;
+    pplatillo -> setIngredientes("pan, queso, jamon, mayonesa");
     cout << "Ingredientes: " << pplatillo -> getIngredientes() << endl;
     //cout << "Es Vegano: " << pplatillo -> esvegano() << endl;
 }
