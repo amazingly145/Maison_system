@@ -12,7 +12,7 @@
 * que ha creado y también el numero del mismo
 * Implementamos Herencia de la clase Empleado
 */
-//Mandamos a llamar las librerías
+//Mandamos a llamar las librerias
 using namespace std;
 #include <iostream>
 # include <string>
@@ -28,7 +28,7 @@ class Cocinero : public Empleado{
         Cocinero(string _nombre, string _id, string _rol, int);
         void setNumero_platillos(int);
         int getNumero_platillos( );
-        //Sobre escritura 
+        //Sobrescritura 
         void EmpleadoData();
 
 };
