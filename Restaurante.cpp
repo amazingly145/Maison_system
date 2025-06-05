@@ -27,17 +27,17 @@ using namespace std;
 Restaurante::Restaurante(){
 
 }
-Restaurante::Restaurante(string _nombre, string _direccion, Empleado _numero_empleados, int _rating){
+Restaurante::Restaurante(string _nombre, string _direccion/*, Empleado*_num_empleados*/, int _rating){
     nombre = _nombre;
     direccion = _direccion;
-    numero_empleados = _numero_empleados;
+    //num_empleados = _num_empleados;
     rating = _rating;
 }
-Restaurante::Restaurante(string _nombre, string _direccion, int _rating){
+/*Restaurante::Restaurante(string _nombre, string _direccion, int _rating){
     nombre = _nombre;
     direccion = _direccion;
     rating = _rating;
-}
+}*/
 //Metodos setters
 void Restaurante::setNombre(string _nombre){
     nombre = _nombre;
@@ -48,7 +48,9 @@ void Restaurante::setDireccion(string _direccion){
 void Restaurante::setRating(int _rating){
     rating = _rating;
 }
-
+/*void Restaurante::setNumEmpleados(Empleado* _empleado) {
+    num_empleados = _empleado;
+}*/
 //Metodos Getters
 int Restaurante::getRating(){
     return rating;
@@ -59,6 +61,6 @@ string Restaurante::getDireccion(){
 
 //Recopila todos los datos del restaurante
 string Restaurante :: RestauranteData(){
-    return "El restaurante se llama: "+ nombre + "se ubica en: " +
-        direccion + "Tiene un número de empleados de: " + to_string(numero_empleados.getNumero_empleados()); //falta agregar numero empleados
+    return "El restaurante se llama: "+ nombre + "\nSe ubica en: " +
+        direccion + "\nTiene un numero de empleados de: " + "5" /*+ num_empleados->getNumero_empleados()*/;
 }
