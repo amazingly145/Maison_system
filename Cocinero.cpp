@@ -1,4 +1,4 @@
-*
+/*
 * Proyecto Restaurante
 * Andrea Iliana Cantu Mayorga
 * A01753419

@@ -58,8 +58,3 @@ void Mesero::EmpleadoData(){
     Empleado::EmpleadoData();
     cout << "El mesero esta atendiendo mesa: " << atender << endl;
 }
-
-void Mesero::EmpleadoData(){
-    Empleado::EmpleadoData();
-    cout << "El mesero esta atendiendo mesa: " << atender << endl;
-}
