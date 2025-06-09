@@ -45,9 +45,23 @@ string Mesero :: getAtender(){
 
 void Mesero :: atender_cliente(string _atender){
     if (_atender == "S"){
+        string forma_pago;
+        int num_personas;
+        string nombre_cliente;
+        int _numero_mesa;
         cout << "Que mesa atiendes? " << endl;
-        cin >> numero_mesa;
-        cout << "atiendes numero mesa: " << numero_mesa;
+        cin >> _numero_mesa;
+        cout << "atiendes numero mesa: " << _numero_mesa;
+        numero_mesa = _numero_mesa;
+        cout << "Nombre del cliente: " << endl;
+        cin >> nombre_cliente;
+        cout << "¿Cual es la forma de pago? (efectivo/tarjeta)" << endl;
+        cin >> forma_pago;
+        cliente.setForma_pago(forma_pago);
+        cout << "¿Cuantas personas hay en la mesa?" << endl;
+        cin >> num_personas;
+        cliente.setNum_personas(num_personas);
+        cliente.ClienteData();
     }else{
         numero_mesa = 0;
         cout << numero_mesa << endl;
@@ -56,5 +70,5 @@ void Mesero :: atender_cliente(string _atender){
 
 void Mesero::EmpleadoData(){
     Empleado::EmpleadoData();
-    cout << "El mesero esta atendiendo mesa: " << atender << endl;
+    cout << "El mesero esta atendiendo mesa: " << numero_mesa << endl;
 }

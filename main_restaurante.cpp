@@ -21,12 +21,14 @@ void menu(){
     cout << "4. Ver menu del dia" << endl;
     cout << "5. Ver nuevo platillo creado" << endl;
     cout << "6. Ver calificacion del restaurante" << endl;
-    cout << "7. Salir" << endl;
+    cout << "7. Ver informacion del cliente" << endl;
+    cout << "8. Salir" << endl;
 }
 void instrucciones_de_uso(){
     cout << "Instrucciones de uso" << endl;
     cout << "1. En el menu solo usar numeros" << endl;
     cout << "2. Usar numeros del 1 al 7" << endl;
+    cout << "3. Seguir las instruciones de uso o variable" << endl;
 }
 int main(){
     cout << "Bienvenido al sistema de un restaurante." << endl;
@@ -40,6 +42,7 @@ int main(){
     Orden orden;
     Platillo platillo;
     Mesero mesero;
+    Cliente cliente;
     //Para agregacion
     Empleado* empleado_data;
     //Se crea puntero para agregacion
@@ -58,13 +61,10 @@ int main(){
             cout << "Nombre del restaurante: " << endl;
             cin >> nombre;
             restaurante.setNombre(nombre);
-            /*cout << "Numero de empleados: " << endl;
-            cin >> num_empleados;
-            empleado->setNumero_empleados(num_empleados);*/
             cout << "Direccion: " << endl;
             cin >> direccion;
             restaurante.setDireccion(direccion);
-            cout << "Rating del usuario: " << endl;
+            cout << "Rating del usuario (escribir numeros enteros del 1 al 5): " << endl;
             cin >> rating;
             restaurante.setRating(rating);
         }
@@ -88,7 +88,7 @@ int main(){
                 empleado_data -> EmpleadoData();
             }
             if (rol == "mesero"){
-                cout << "Atiendes una mesa"<< endl;
+                cout << "Atiendes una mesa (S/N)"<< endl;
                 cin >> atender;
                 mesero.atender_cliente(atender);
                 empleado_data = new Mesero(nombre, id, rol, atender);
@@ -106,9 +106,12 @@ int main(){
             cout << "Nueva calificacion dado por el cliente: " << endl;
             cin >> rating;
             restaurante.setRating(rating);
-            cout << restaurante.getRating() << endl;;
+            cout << restaurante.getRating() << endl;
         }
         else if (usuario == 7){
+            cout << cliente.ClienteData() << endl;
+        }
+        else if (usuario == 8){
             cout << "Saliendo del programa..." << endl;
             constante = false;
         }
