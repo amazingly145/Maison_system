@@ -20,13 +20,12 @@ using namespace std;
 Platillo::Platillo(){
 
 }
-Platillo :: Platillo(string _nombre, string _entrada,  int _calificacion, bool _vegano, string _plato_fuerte, string _postre, string _ingrediente){
+Platillo :: Platillo(string _nombre, string _entrada,  int _calificacion, string _plato_fuerte, string _postre, string _ingrediente){
     nombre = _nombre;
     entrada = _entrada;
     plato_fuerte = _plato_fuerte;
     postre = _postre;
     calificacion = _calificacion;
-    vegano = _vegano;
     ingredientes = _ingrediente;
 }
 //Metodos Setters

@@ -27,12 +27,11 @@ class Platillo{
         string postre;
         string ingredientes;
         int calificacion;
-        bool vegano;
     //declaramos metodos
     public:
         //Constructor
         Platillo();
-        Platillo (string, string, int, bool, string, string, string);
+        Platillo (string, string, int, string, string, string);
         //Metodos setters
         void setNombre(string);
         void setEntrada(string);
