@@ -5,16 +5,20 @@
 Maison_system es un sistema para los restaurantes, donde pueden observar el sistema que llevan en su restaurante, así como el número de personas que entran y también los platillos que escogen. Se puede ver el sistema de trabajo, como: meseros y cocineros. Para poder analizar el servicio que se les brinda y de esta manera el restaurante podrá ver las áreas de oportunidad en donde necesitan mejorar.
 ## Funcionalidad 
 El programa comienza con un sistema de bienvenida al usuario y se le despliega el siguiente menú:
-1. Obtener información general.
-2. Atender cliente.
-3. Obtener información de la orden.
-4. Registrar platillo.
-5. Ver calificaciones del restaurante.
-6. Salir.
+--------------------Menu--------------------
+1. Colocar informacion restaurante
+2. Obtener informacion restaurante
+3. Registrar empleado/cliente
+4. Ver menu del dia
+5. Ver nuevo platillo creado
+6. Nuevo rating
+7. Salir
+------------------------------------------
 La elección se realizará cuando al usuario se le despliege este mismo, y pueda escoger alguna de las opciones que se muestran en el menú anterior. Cuando se seleccione la opción deseada, el usuario podrá hacer lo que se le pida y si desea Salir deberá escoger la opción de salir de cada función a través de esa opción. Si desea salir del programa por completo deberá de escoger la opción 6.
 ## Casos que haría que el proyecto deje de funcionar 
 1. Si se le pide al usuario una opción del menú y en lugar de escribir un número, escribe una palabra el programa no responderá y volverá a imprimir el menú, por lo que, se le debe de colocar números.
 2. Si se escoge alguna de las opciones que no se encuentra en el menú, el programa no sabrá que hacer y se le volverá a pedir al usuario la opción.
+3. Si en lugar de poner se pone un float
 ## Compilacion
 1. Es necesario haber descargado c++ en la computadora para que se pueda compilar, sin tener esta opcion no es posible que compile.
 2. Para poder compilar el programa, es necesario descargar todos los archivos (headers y cpp).
@@ -27,4 +31,6 @@ Version 1.0 15 de mayo del 2025. El programa consta de 7 clases: 3 son del tipo 
 
 Version 2.0 22 de mayo del 2025. Se comentó que en el entrega anterior no se podría observar el UML, por lo que se asistió a una asesorá para poder obtener retroalimentación. Se agregó el UML en dos formatos (*jpg* y *png*). Por si uno de los formatos no funcionaba, también se agregó el archivo en el *README*. En esta entrega se implementó en el UML la sobrecarga y sobreescritura. Se empezó a desarrollar el código de las mismas. Se implementando todas las clases, en formatos *.h* y *.cpp*. Faltó desarrollar el main, por lo que no se puede correr o compilar todavía. Cada clase tiene su propio archivo header y cpp, mientras que el archivo main contiene todos los archivos *.cpp* de las clases
 
-Version 3.0 29 de mayo del 2025. 
+Version 3.0 29 de mayo del 2025 Se implementó polimorfismo en las clases donde se usa herencia **Empleado**, **Cocinero** y **Mesero**. se sobrescribió el metodo de empleadoData() para poder hacer el mismo. Así como, se verificó la razón por la que no compila debido a los comentarios de la entrega anterior. Se implementó el main del poyecto tomando en cuenta todas las clases y funciones necesarias para la compilación. Para hacer polimorfismo se implementó la función de virtual en el metodo donde se esta sobrescribiendo y se implementaron apuntadores, para el mismo.
+
+Version 4.0 5 de junio del 2025 Se implementó la clase abstracta, en este caso es la clase **Empleado** esta clase no se puede utilizar en el programa se debe de acceder a ella a través de los hijos, se cambiaron algunas de las variables del main, así como la implementación del proyecto. Se verificó porque no se podía compilar el proyecto y se hicieron las correcciones necesarias. 
