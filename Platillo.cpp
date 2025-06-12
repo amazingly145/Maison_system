@@ -1,19 +1,22 @@
 /*
-* Proyecto Restaurante
-* Andrea Iliana Cantu Mayorga
-* A01753419
-* 21 de mayo del 2025
+ * Proyecto Maison_system clase Platillo
+ * Andrea Iliana Cantu Mayorga
+ * A01753419
+ * 11 de junio del 2025
+ * version 2
+ * Agregacion con Orden
 */
-
 /*
-* Clase Platillo (archivo cpp)
-*
+* Clase Platillo(archivo cpp)
+* Es una clase donde obtenemos las componentes de la orden
+* tambien se puede calificar el platillo y se menciona si esta bien o no
 */
 //Mandamos a llamar las librerías
 using namespace std;
 #include <iostream>
 #include <string>
 #include "Platillo.h"
+//Constructor default
 Platillo::Platillo(){
 
 }
@@ -58,17 +61,21 @@ string Platillo::getPlato_fuerte(){
 string Platillo::getPostre(){
     return postre;
 }
+/* Verifica la calificacion obtenida
+ * y verifica si la calificacion es buena o mala
+ * regresa la calificacion
+*/
 int Platillo::getCalificacion(){
+    if (calificacion >= 3){
+        cout << "Muy buen platillo" << endl;
+        cout << "Tiene una calificacion de: ";
+    }else{
+        cout << "Debemos de mejorar el platillo" << endl;
+        cout << "Tiene una calificacion de: ";
+    }
     return calificacion;
 }
+
 string Platillo::getIngredientes(){
     return ingredientes;
-}
-//Metodo para saber si es vegano
-bool Platillo :: esvegano(string ingredientes){
-    if (ingredientes=="vegano"){
-        return true;
-    }else{
-        return false;
-    }
 }

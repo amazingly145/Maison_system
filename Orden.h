@@ -1,13 +1,16 @@
 /*
-* Proyecto Restaurante
-* Andrea Iliana Cantu Mayorga
-* A01753419
-* 21 de mayo del 2025
+ * Proyecto Maison_system clase Orden
+ * Andrea Iliana Cantu Mayorga
+ * A01753419
+ * 11 de junio del 2025
+ * version 1
+ * Composicion con empleado
+ * Agregacion con Platillo
 */
 
 /*
 * Clase Orden(archivo header)
-* Es una clase donde se recopila la información
+* Es una clase donde se recopila la informacion
 * del cliente, como su nombre, numero de personas 
 * que la acompañan y la forma de pago.
 */
@@ -18,12 +21,11 @@ using namespace std;
 #include "Platillo.h"
 #ifndef ORDEN_H
 #define ORDEN_H
-//Agregacion con platillo
+//definimos la clase orden
 class Orden{
+    //declaramos los atributos o variables de instancia
     private:
-        int orden_max;
         int numero_orden;
-        float total_pagar;
         int numero_platillos;
         int numero_mesa;
         string fecha;
@@ -32,11 +34,12 @@ class Orden{
         Platillo*pplatillo;  
     public:
         //Metodo para inicializar el puntero
+        //Orden recibe el puntero platillo
         Orden(Platillo*);
         Orden();
-        Orden (int, float, int, int, string, int _orden_max);
+        Orden (int, int, int, string);
         //Sobrecarga
-        Orden (int, float, int, int, string, string);
+        Orden (int, int, int, string, string);
         //Setters
         void setNumero_orden(int);
         void setTotal_pagar(float);
@@ -49,7 +52,9 @@ class Orden{
         float getNumero_platillos();
         int getNumero_mesa();
         string getFecha();
-        void nuevoPlatillo();
+        //
+        void menu_del_dia();
+        //Metodo para mostrarOrden
         void mostrarOrden();
 };
 #endif

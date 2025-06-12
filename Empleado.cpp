@@ -1,8 +1,10 @@
 /*
-* Proyecto Restaurante
-* Andrea Iliana Cantu Mayorga
-* A01753419
-* 21 de mayo del 2025
+ * Proyecto Maison_system clase Empleado
+ * Andrea Iliana Cantu Mayorga
+ * A01753419
+ * 11 de junio del 2025
+ * version 2
+ * Composicion con Empleado
 */
 
 /*
@@ -18,17 +20,19 @@
 using namespace std;
 #include <string>
 #include "Empleado.h"
-//Constructor donde se inicializan los valores
+//Constructorpor default
 Empleado::Empleado(){
 
 }
+//Constructor donde se inicializan los valores
 Empleado::Empleado(string _nombre, string _id, string _rol){
     nombre = _nombre;
     id = _id;
     rol = _rol;
 }
-
-Empleado :: Empleado(string _nombre, string _id, string _rol, int _numero_empleados){
+//Constructor de sobre carga
+Empleado :: Empleado(string _nombre, string _id, string _rol, 
+    int _numero_empleados){
     nombre = _nombre;
     id = _id;
     rol = _rol;
@@ -48,6 +52,7 @@ void Empleado :: setRol(string _rol){
 void Empleado :: setNumero_empleados(int _numero_empleados){
     numero_empleados = _numero_empleados;
 }
+
 //Metodos getters
 string Empleado :: getNombre(){
     return nombre;
@@ -61,6 +66,12 @@ string Empleado :: getRol(){
 string Empleado :: getNumero_empleados(){
     return to_string(numero_empleados);
 }
+
+/* Metodo para obtener informacion del empleado
+ * Se va a crear sobrescritura con sus clases hijas
+ * se imprimen los datos del empleado
+ */
 void Empleado::EmpleadoData(){
-    cout << "Nombre del empleado: "+ nombre + "\nId: " + id + "\nRol:"+ rol << endl;
+    cout << "Nombre del empleado: "+ nombre + "\nId: " + 
+    id + "\nRol:"+ rol << endl;
 }
